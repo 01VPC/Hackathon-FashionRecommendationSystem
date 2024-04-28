@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Recommended Outfit</h1>
+    <div>
+        {% for image_path in outfit_images %}
+            <img src="{{ image_path }}" alt="Outfit Image">
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+{% comment %} c:\Users\Vaishnavi\Desktop\hackathon\Ecommerce\savedModels\vectorizer.joblib {% endcomment %}

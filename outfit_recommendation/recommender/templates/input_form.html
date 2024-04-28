@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Outfit Recommendation Form</h2>
+    <form method="post" action="{% url 'recommend_outfit' %}" class="my-4">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="text" name="gender" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="mastercategory">Master Category</label>
+            <input type="text" name="mastercategory" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="subcategory">Sub Category</label>
+            <input type="text" name="subcategory" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="articletype">Article Type</label>
+            <input type="text" name="articletype" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="usage">Usage</label>
+            <input type="text" name="usage" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="colour">Colour</label>
+            <input type="text" name="colour" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Recommend</button>
+    </form>
+</div>
+{% endblock %}
